@@ -1,0 +1,115 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f8f8f8;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+button, .button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, .button:hover {
+    background-color: #218838;
+}
+
+/* Styling for "Book Now" links */
+.book-now {
+    color: white;
+    background-color: #007bff;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.book-now:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the Dashboard layout */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 15px;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.logout {
+    background-color: #dc3545;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.logout:hover {
+    background-color: #c82333;
+}

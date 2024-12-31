@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Travel Booking</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#booking-form">Book Vacation</a></li>
+                    <li><a href="#available-flights">Available Flights</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <h1>Plan Your Next Vacation</h1>
+                <p>Book exciting vacation packages and find the best flights.</p>
+                <a href="#booking-form" class="btn">Book Now</a>
+            </div>
+        </section>
+
+        <section id="booking-form" class="container">
+            <h2>Book Your Vacation</h2>
+            <form action="/book" method="post">
+                <label for="customer-name">Your Name:</label>
+                <input type="text" id="customer-name" name="customer-name" placeholder="Enter your name" required>
+                
+                <label for="destination">Choose Destination:</label>
+                <select id="destination" name="destination" required>
+                    <option value="New York">New York</option>
+                    <option value="London">London</option>
+                    <option value="Paris">Paris</option>
+                </select>
+                
+                <label for="flight">Choose Flight:</label>
+                <select id="flight" name="flight" required>
+                    <option value="NY-123">NY-123 (New York to London)</option>
+                    <option value="LD-456">LD-456 (London to Paris)</option>
+                </select>
+
+                <label for="start-date">Vacation Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+
+                <label for="end-date">Vacation End Date:</label>
+                <input type="date" id="end-date" name="end-date" required>
+
+                <button type="submit" class="btn">Book Now</button>
+            </form>
+        </section>
+        
+        <section id="available-flights" class="container">
+            <h2>Available Flights</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Flight Number</th>
+                        <th>Origin</th>
+                        <th>Destination</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Seats Available</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be dynamically populated from DB -->
+                    <tr>
+                        <td>NY-123</td>
+                        <td>New York</td>
+                        <td>London</td>
+                        <td>2024-09-24 08:00</td>
+                        <td>2024-09-24 14:00</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>LD-456</td>
+                        <td>London</td>
+                        <td>Paris</td>
+                        <td>2024-09-25 10:00</td>
+                        <td>2024-09-25 12:00</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out at <a href="mailto:info@travelbooking.com">info@travelbooking.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travel Booking System. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        // scripts.js
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-links-active');
+});
+
+    </script>
+</body>
+</html>

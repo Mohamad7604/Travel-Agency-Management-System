@@ -1,0 +1,29 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+</head>
+<body>
+
+<h1>Add a New Item</h1>
+
+<form action="actions/add_item.php" method="post" enctype="multipart/form-data">
+<label for="name">name:</label><br>
+<input type="text" name="name">
+
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+
+    <label for="image">Image:</label><br>
+    <input type="file" name="image" id="image" accept="image/*"><br><br>
+
+    <input type="submit" value="Add Item">
+</form>
+
+</body>
+</html>
